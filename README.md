@@ -1,3 +1,4 @@
+
 # 💳 Credit Card Fraud Detection with PySpark & Random Forest
 
 This project involves detecting fraudulent credit card transactions from over 1 million synthetic records. It covers exploratory data analysis (EDA), feature engineering, model development (logistic regression & random forest), and simulation of real-world deployment.
@@ -78,15 +79,22 @@ Over 10 new features were created, including:
 
 ---
 
-## 📊 Feature Importances (Top 5)
+## 🧠 Feature Importances (Top 10)
 
-| Feature | Importance |
-|---------|------------|
-| `user_avg_amt` | High |
-| `hour` | High |
-| `category_index` | Medium |
-| `distance_km` | Medium |
-| `user_std_amt` | Medium |
+| Feature               | Importance |
+|-----------------------|------------|
+| `amt`                | 0.2742     |
+| `category_index`     | 0.1743     |
+| `hour`               | 0.1511     |
+| `is_high_spender`    | 0.0662     |
+| `age`                | 0.0622     |
+| `user_avg_amt`       | 0.0557     |
+| `user_total_amt`     | 0.0407     |
+| `age_group_index`    | 0.0335     |
+| `is_high_risk_category` | 0.0315  |
+| `user_txn_count`     | 0.0298     |
+
+> 📉 `distance_km`, `merch_lat/long`, and `low_variance_spend` contributed very little to the model's predictive power.
 
 ---
 
@@ -122,3 +130,21 @@ pip install -r requirements.txt
 
 # Launch notebook
 jupyter notebook
+```
+
+---
+
+## 🧠 Tech Stack
+
+- Python
+- PySpark
+- Pandas, NumPy
+- Scikit-learn
+- Matplotlib / Seaborn
+- Jupyter Notebook
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License.
